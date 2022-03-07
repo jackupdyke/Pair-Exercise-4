@@ -67,7 +67,10 @@ namespace CatCards.Controllers
             return Ok(cardDao.UpdateCard(catCard));
         }
 
-        //[HttpDelete("{id}")]
-        //public
+        [HttpDelete("{id}")]
+        public void DeleteCard(int id)
+        {
+            cardDao.RemoveCard(id);
+        }
     }
 }
